@@ -1,0 +1,7 @@
+class Solution:
+    def lastIndex(self, s):
+        s=list(s)
+        if '1' in s:
+            return "".join(s).rindex('1')
+        if "1" not in s:
+            return -1
