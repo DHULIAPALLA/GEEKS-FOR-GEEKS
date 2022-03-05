@@ -1,0 +1,6 @@
+class Solution:
+    def maximizeMoney(self, N , K):
+        if N%2==0:
+            return K*N//2
+        else:
+            return K*((N//2)+1)
