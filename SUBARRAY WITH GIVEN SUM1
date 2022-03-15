@@ -1,0 +1,28 @@
+class Solution:
+    def subArraySum(self,arr, n, s):
+        low=0
+        high=0
+        sumi=0
+        Found=False
+        if s in arr:
+            Found=True
+            val=[arr.index(s)+1,arr.index(s)+1]
+        while high<n and low>=0:
+            if sumi<s:
+                sumi+=arr[high]
+                high+=1
+            if sumi>s:
+                sumi-=arr[low]
+                low+=1
+            if sumi==s:
+                if Found:
+                    if val[0]>low+1:
+                        return [low+1,high]
+                    else:
+                        return val
+                else:
+                    return [low+1,high]
+        if Found:
+            return val
+        return [-1]
+        
