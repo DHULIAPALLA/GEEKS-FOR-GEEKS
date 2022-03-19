@@ -1,0 +1,13 @@
+class Solution:
+    #Complete this function
+    #Function to sort the array into a wave-like array.
+    def convertToWave(self,arr,N):
+        c=0
+        for i in range(N):
+            c+=1
+            if c==2:
+                t=arr[i]
+                arr[i]=arr[i-1]
+                arr[i-1]=t
+                c=0
+        return arr
