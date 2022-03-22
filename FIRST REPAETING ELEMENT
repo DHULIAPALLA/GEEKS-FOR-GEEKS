@@ -1,0 +1,16 @@
+class Solution:
+    #Function to return the position of the first repeating element.
+    def firstRepeated(self,arr, n):
+        D={}
+        for i in range(n):
+            if arr[i] not in D:
+                D[arr[i]]=1
+            else:
+                D[arr[i]]+=1
+        
+        for i in range(n):
+            if D[arr[i]]>1:
+                
+                return i+1
+        return -1
+            
