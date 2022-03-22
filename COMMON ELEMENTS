@@ -1,0 +1,8 @@
+class Solution:
+    def commonElements (self,A, B, C, n1, n2, n3):
+        set1=set(A)
+        set2=set(B)
+        set3=set(C)
+        l=list(set1.intersection(set2,set3))
+        l.sort()
+        return l
