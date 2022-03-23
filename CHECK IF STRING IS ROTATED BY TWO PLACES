@@ -1,0 +1,11 @@
+class Solution:
+    #Function to check if a string can be obtained by rotating
+    #another string by exactly 2 places.
+    def isRotated(self,str1,str2):
+        if str1==str2:
+            return True
+        s=str1[2:]+str1[:2]
+        s1=str1[-2]+str1[-1]+str1[:len(str1)-2]
+        if str2==s or str2==s1:
+            return True
+        return False
