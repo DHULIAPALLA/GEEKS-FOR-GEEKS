@@ -1,0 +1,7 @@
+def isAnagram(self,a,b):
+        l="".join(sorted(a.lower())).strip()
+        k="".join(sorted(b.lower())).strip()
+        if l==k:
+            return 1
+        else:
+            return 0
