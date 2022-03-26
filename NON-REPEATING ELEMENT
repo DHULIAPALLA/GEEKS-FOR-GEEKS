@@ -1,0 +1,13 @@
+class Solution:
+    def firstNonRepeating(self, arr, n):
+        mdict={}
+        for num in arr:
+            if num in mdict:
+                mdict[num]+=1
+            else:
+                mdict[num]=1
+        for num in arr:
+            if mdict[num]==1:
+                return num
+        return 0
+        
