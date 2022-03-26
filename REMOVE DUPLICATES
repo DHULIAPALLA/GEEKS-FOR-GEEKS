@@ -1,0 +1,10 @@
+class Solution:
+	def removeDups(self, S):
+	    d=""
+	    for ch in S:
+	        if ch not in d:
+	            d+=ch
+	        else:
+	            pass
+	    return d
+	
