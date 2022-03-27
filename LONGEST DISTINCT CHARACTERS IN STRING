@@ -1,0 +1,16 @@
+class Solution:
+
+    def longestSubstrDistinctChars(self, S):
+        max1=0
+        for i in range(len(S)):
+            count=0
+            c=[]
+            for j in range(i,len(S)):
+                if S[j] in c:
+                    break
+                else:
+                    c.append(S[j])
+                    count+=1
+            if count>max1:
+                max1=count
+        return max1
