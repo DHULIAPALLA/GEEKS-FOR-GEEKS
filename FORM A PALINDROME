@@ -1,0 +1,19 @@
+def countMin(self, Str):
+        
+        l = len(Str)
+        dp = []
+        for i in range(l):
+            
+            a = [0]*l
+            dp.append(a)
+            dp[i][i] = 1
+       
+        for gap in range(1,l):
+            for start in range(l-gap):
+                if Str[start] == Str[start+gap]:
+                    dp[start][start+gap] = 2+dp[start+1][start+gap-1]
+                else:
+                    dp[start][start+gap] = max(dp[start][start+gap-1], dp[start+1][start+gap])
+                   
+           
+        return l-dp[0][l-1]
